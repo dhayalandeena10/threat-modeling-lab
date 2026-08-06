@@ -1,0 +1,4 @@
+# OS/editor junk only — this repo should stay fully readable.
+.DS_Store
+*.swp
+.obsidian/workspace*
