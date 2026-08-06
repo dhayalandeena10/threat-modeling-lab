@@ -50,3 +50,42 @@ model, standing up a TM practice at an org, threat modeling as code.
 
 To start a drill, just ask — the default protocol in `CLAUDE.md` kicks in
 automatically.
+
+## SCR Track
+
+Secure code review drills — manually spotting vulnerabilities in code with
+no tools, no autocomplete, mirroring the unassisted FAANG secure-code-review
+round. Distinct from and cross-referenced with the threat-modeling track.
+
+### Progress
+
+| Level | Language | Vuln classes present | Date | Recall | Precision | Top weakness |
+|---|---|---|---|---|---|---|
+| — | — | — | — | — | — | — |
+
+### Curriculum
+
+#### `scr/drills/00-basics`
+Single file, single vulnerability class. Learning to spot the textbook tell.
+
+#### `scr/drills/01-intermediate`
+Single file, multiple vulnerability classes, realistic size. Discrimination
+starts mattering — not everything flagged is actually exploitable.
+
+#### `scr/drills/02-advanced`
+Multi-file / PR-sized diffs. Business logic flaws (no syntactic tell)
+introduced from this level onward.
+
+#### `scr/drills/03-mastery`
+Cold, cross-language, timed, adversarial cross-examination on the
+weakest-justified finding. Occasionally cross-referenced against a system
+already threat-modeled in `drills/`, to test whether the threat model
+predicted the real vulnerability class.
+
+### How this part of the repo works
+
+- `scr/reference/` — vuln checklist (pre-flight skim), per-language
+  "where vulnerabilities hide" notes, and a standalone drill protocol.
+- `scr/drills/` — generated drill code, by level.
+- `scr/my-reviews/` — submitted reviews, kept for pattern tracking over time.
+- Operating rules live in `CLAUDE.md` under "Secure Code Review Track".
